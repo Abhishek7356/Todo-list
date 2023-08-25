@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: linear-gradient(to right, #153677, #4e085f);
+    padding: 6px;
+}
+
+.todo {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    background-color: rgb(234, 232, 232);
+    /* margin: 0 10px; */
+    width: 95%;
+}
+#inp{
+    display: flex;
+}
+input{
+    width: 75%;
+    flex: 1;
+}
+.list{
+    border: 1px solid rgb(139, 91, 12);
+    padding: 5px 15px;
+    border-radius: 50px;
+    margin-top: 20px;
+    position: relative;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+.delete{
+    position: absolute;
+    right: 4px;
+    outline: none;
+    border: none;
+    font-size: 30px;
+    font-size: 25px;
+    padding: 2px 15px;
+    background: transparent;
+    border-radius: 50px;
+}
+.edit{
+    position: absolute;
+    right: 70px;
+    outline: none;
+    border: none;
+    font-size: 25px;
+    padding: 2px 15px;
+    background: transparent;
+    border-radius: 50px;
+}
+.list button:hover{
+    background-color: rgb(192, 190, 190);
+}
