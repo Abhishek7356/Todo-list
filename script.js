@@ -26,7 +26,10 @@ function addItem(content) {
         inputBox.value = '';
     } else {
         document.getElementById('doneBtn').innerHTML = 'Add Task';
-        inputBox.classList.remove("border-danger")
+        inputBox.classList.remove("border-danger");
+        document.getElementById('doneBtn').classList.remove("bg-danger");
+        inputBox.style.outline = '';
+        inputBox.style.outlineOffset = '';
         if (document.getElementById('task').value == '') {
             alert('Please Enter ..')
         } else {
@@ -59,39 +62,13 @@ list.addEventListener("click", function (e) {
         let tag = e.target.parentElement;
         console.log(tag.childNodes[0]);
         inputBox.value = tag.childNodes[0].innerHTML;
-        document.getElementById('doneBtn').innerHTML = 'Edit &#10004;';
+        document.getElementById('doneBtn').innerHTML = 'Edit 🖊️';
+        document.getElementById('doneBtn').classList.add("bg-danger");
+        inputBox.style.outline = '2px solid gray';
+        inputBox.style.outlineOffset = '5px';
         e.target.parentElement.remove();
         inputBox.classList.add("border-danger");
     }
 })
 
 
-
-
-
-
-
-// const inputBox = document.getElementById('task');
-// const list = document.getElementById('todoList');
-
-// function addItem() {
-//     if (inputBox.value == '') {
-//         alert('Enter your Task');
-//     } else {
-//         let item = document.createElement("p");
-//         item.innerHTML = inputBox.value;
-//         let span = document.createElement('span');
-//         span.innerHTML = '&#10006;';
-//         item.appendChild(span);
-//         list.appendChild(item);
-//         inputBox.value = ''
-//     }
-// }
-
-// list.addEventListener("click",function(e){
-//     if(e.target.tagName == "SPAN"){
-//         e.target.parentElement.remove();
-//     }
-//     console.log(e.target.tagName);
-//     console.log(e.target.parentElement);
-// })

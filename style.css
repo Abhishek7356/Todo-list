@@ -4,37 +4,76 @@
 }
 
 body {
-    background-image: linear-gradient(to right, #153677, #4e085f);
+    /* background-image: linear-gradient(to right, #153677, #4e085f); */
+    background: linear-gradient(to right, #7E0F4B, #1A5865);
     padding: 6px;
 }
 
 .todo {
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     border-radius: 10px;
     background-color: rgb(234, 232, 232);
-    /* margin: 0 10px; */
-    width: 95%;
 }
-#inp{
+
+#inp {
     display: flex;
+    position: relative;
+    margin-top: 25px;
 }
-input{
-    width: 75%;
+
+input {
     flex: 1;
+    padding: 8px 15px;
+    outline: none;
+    border-radius: 50px;
+    background: transparent;
+    border: 3px solid #5E5DF0;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: .3s;
 }
-.list{
-    border: 1px solid rgb(139, 91, 12);
+.button-34 {
+    background: #5E5DF0;
+    border-radius: 999px;
+    box-shadow: #5E5DF0 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+    height: 100%;
+    word-break: break-word;
+    border: 0;
+    position: absolute;
+    right: 0;
+}
+
+.list {
+    border: 2px solid #7E0F4B;
     padding: 5px 15px;
     border-radius: 50px;
     margin-top: 20px;
     position: relative;
     height: 50px;
     display: flex;
+    font-weight: bold;
     align-items: center;
+    letter-spacing: 2px;
 }
-.delete{
+
+.delete {
     position: absolute;
-    right: 4px;
+    right: 3px;
     outline: none;
     border: none;
     font-size: 30px;
@@ -43,9 +82,10 @@ input{
     background: transparent;
     border-radius: 50px;
 }
-.edit{
+
+.edit {
     position: absolute;
-    right: 70px;
+    right: 65px;
     outline: none;
     border: none;
     font-size: 25px;
@@ -53,6 +93,34 @@ input{
     background: transparent;
     border-radius: 50px;
 }
-.list button:hover{
+
+.list button:hover {
+    /* background-color: #5E5DF0; */
     background-color: rgb(192, 190, 190);
 }
+input:focus{
+    box-shadow: black 0 10px 10px -10px;
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+    .delete {
+        right: 3px;
+        padding: 2px 5px;
+        z-index: 2;
+    }
+    
+    .edit {
+        right: 40px;
+        padding: 2px 5px;
+        z-index: 2;
+    }
+    .list{
+        overflow: hidden;
+        letter-spacing: 0px;
+        padding: 5px 13px;
+        /* font-weight: normal; */
+    }
+  }
